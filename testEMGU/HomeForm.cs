@@ -225,9 +225,15 @@ namespace testEMGU
         private void dilationToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Dilation dilation = new Dilation();
-            var bitmap = dilation.GetBitmap(_ImageInput);
-            var smooth = dilation.Smooth(bitmap);
-            imageBox1.Image = new Image<Bgr, Byte>(smooth);
+            dilation.setDilationInput(_ImageInput);
+            imageBox1.Image = dilation.ApplyDilation();
+        }
+
+        private void erosionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Erosion erosion = new Erosion();
+            erosion.setErosionInput(_ImageInput);
+            imageBox1.Image = erosion.ErosionPic();
         }
     }
 

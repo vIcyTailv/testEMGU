@@ -58,6 +58,7 @@
     <Compile Include="Operator\Canny.cs" />
     <Compile Include="Operator\DFT.cs" />
     <Compile Include="Operator\Dilation.cs" />
+    <Compile Include="Operator\Erosion.cs" />
     <Compile Include="Operator\Gaussian.cs" />
     <Compile Include="Operator\Laplace.cs" />
     <Compile Include="Operator\OperatorParameters\CannyParameters.cs">
@@ -85,7 +86,6 @@
       <DependentUpon>LaplaceParameters.cs</DependentUpon>
     </Compile>
     <Compile Include="Operator\Sobel.cs" />
-    <Compile Include="Operator\test.ignore.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Operator\OperatorParameters\SobelParameters.cs">

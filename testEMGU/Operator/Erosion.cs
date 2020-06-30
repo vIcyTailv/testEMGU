@@ -6,24 +6,22 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace testEMGU.Operator
 {
-    class Dilation
+    class Erosion
     {
         private Image<Bgr, byte> imageInput;
         private Image<Bgr, byte> imageOutput;
 
-        public Image<Bgr, byte> ApplyDilation()
+        public Image<Bgr,byte> ErosionPic()
         {
-            imageOutput = imageInput.Dilate(3);
+            imageOutput = imageInput.Erode(3);
             return imageOutput;
         }
-        public void setDilationInput(Image<Bgr, byte> input)
+        public void setErosionInput(Image<Bgr, byte> input)
         {
             imageInput = input;
         }
-
     }
 }
